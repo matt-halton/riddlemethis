@@ -1,0 +1,22 @@
+import torch
+import torch.nn as nn
+
+input_size = 10
+output_size = 1
+
+model = nn.Linear(input_size, output_size)  # A simple linear layer
+
+optimizer = torch.optim.SGD(model.parameters(), lr=0.01)
+
+loss = nn.BCELoss()
+
+input = torch.rand(input_size)
+output = model(input)
+target = torch.zeros(output_size)
+target2 = torch.zeros(1)
+
+x = loss(output, target)
+print(x)
+
+x = loss(output, target2)
+print(x)
