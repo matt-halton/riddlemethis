@@ -18,5 +18,5 @@ target2 = torch.zeros(1)
 x = loss(output, target)
 print(x)
 
-x = loss(output, target2)
-print(x)
+y = loss(output, target2)
+print(y)
